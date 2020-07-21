@@ -339,7 +339,7 @@ export default{
 </script>
 
 <style>
-  @keyframes positionChange{
+@keyframes positionChange{
     from {top:0;left:0;}
     to {top:-100px;left:0;}
   }
@@ -526,5 +526,32 @@ export default{
   }
   .songList-box ul .lists-item-name:last-of-type{
     border-bottom: none;
+  }
+  @media screen and (min-width: 768px) {
+    @keyframes positionChange{
+        from {top:0;left:0;}
+        to {top:-400px;left:0;}
+      }
+      .list-bg{
+        height:40%;
+      }
+      .list-bg-img{
+        top:-400px;
+      }
+      .list-Name-box{
+        top:90px;
+        left:160px;
+      }
+      .play-mylist{
+        height:5%;
+        cursor: pointer;
+        margin:2% 0 1% 0;
+      }
+      .my-list{
+        height: 60%;
+      }
+      .lists-item-name,.play-type,.song-name,.song-author,.play-mylist{
+        cursor: pointer;
+      }
   }
 </style>

@@ -284,168 +284,173 @@
 
 <style>
   @keyframes bgChange{
-    from {background-color: rgba(51,51,51,.3);}
-    to {background-color: rgba(51,51,51,.8);}
-  }
-  .play-container{
-    width:100%;
-    height:100%;
-    background-position: center;
-    background-size: cover;
-  }
-  .play-container .list-bg-cover{
-    animation:bgChange 5s;
-    width:100%;
-    background-color: rgba(51,51,51,.8);
-    height:100%;
-    background-image: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,.4));
-  }
-  .mint-header{
-    width:100%;
-    height:6.25%;
-    background: rgba(0,0,0,0);
-    color:#fff;
-  }
-  .mint-header-button{
-    color:#fff;
-  }
-  .mint-button--normal{
-    right:6px;
-  }
-  .mint-header-title{
-    line-height: 40px;
-    display: block;
-    font-size: 16px;
-    color: #fafafa;
-  }
-  .show-lyric-cover{
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.8);
-    position: absolute;
-    z-index: 15;
-    top:0;
-    left: 0;
-  }
-  .shutdown-showLyric{
-    position: absolute;
-    top:15px;
-    right:20px;
-    font-size: 28px;
-    transform: rotate(-45deg);
-    z-index: 25;
-    color:#eee;
-  }
-  .show-lyric-box{
-    width:90%;
-    height:100%;
-    position: absolute;
-    left:5%;
-    top:5%;
-    z-index: 20;
-    overflow-y: auto;
-  }
-  .showLyricUl{
-    width:100%;
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    top:0;
-    transition:all 0.8s;
-  }
-  .show-lyrics{
-    color:#FFF;
-    height:20px;
-    font-size: 16px;
-    margin:20px 0;
-    text-align: center;
-  }
-  .control-volume-box{
-    width:100%;
-    height:24px;
-    position: absolute;
-    top:40px;
-    left:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .volume-img{
-    width:18px;
-    height:18px;
-    margin-right: 10px;
-  }
-  .play-rate,.volume-rate{
-    width:200px;
-    height:2.5px;
-    background: #aaa;
-    position: relative;
-  }
-  .volume-ind,.play-ind{
-    width:20px;
-    height:20px;
-    position: absolute;
-    border-radius: 50%;
-    top:-8.75px;
-    left:190px;
-    background: #eee;
-  }
-  .play-ind{
-    left:-10px;
-  }
-  .played,.volume-size{
-    height:100%;
-    width:100%;
-    background: #eee;
-  }
-  .played{
-    width:0%;
-  }
-  .lyric-box{
-    width:90%;
-    height:76%;
-    position: absolute;
-    top:70px;
-    left:5%;
-    overflow: hidden;
-  }
-  #lyricUl{
-    width:100%;
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    top:0;
-    transition:all 0.8s;
-  }
-  .lyric-list{
-    color:rgba(200,200,200,.9);
-    height:20px;
-    font-size: 16px;
-    margin:20px 0;
-    text-align: center;
-    transition:all 0.3s;
-    overflow: hidden;
-    width:100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  #lyricUl .active{
-    color:rgb(255,152,208);
-  }
-  .control-rate-box{
-    width:100%;
-    height:24px;
-    position: absolute;
-    bottom:50px;
-    left:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .total-time,.rate-time{
-    color:rgba(200,200,200,.5);
-    font-size: 13px;
-    margin:0 10px;
-  }
-
+      from {background-color: rgba(51,51,51,.3);}
+      to {background-color: rgba(51,51,51,.8);}
+    }
+    .play-container{
+      width:100%;
+      height:100%;
+      background-position: center;
+      background-size: cover;
+    }
+    .play-container .list-bg-cover{
+      animation:bgChange 5s;
+      width:100%;
+      background-color: rgba(51,51,51,.8);
+      height:100%;
+      background-image: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,.4));
+    }
+    .mint-header{
+      width:100%;
+      height:6.25%;
+      background: rgba(0,0,0,0);
+      color:#fff;
+    }
+    .mint-header-button{
+      color:#fff;
+    }
+    .mint-button--normal{
+      right:6px;
+    }
+    .mint-header-title{
+      line-height: 40px;
+      display: block;
+      font-size: 16px;
+      color: #fafafa;
+    }
+    .show-lyric-cover{
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,.8);
+      position: absolute;
+      z-index: 15;
+      top:0;
+      left: 0;
+    }
+    .shutdown-showLyric{
+      position: absolute;
+      top:15px;
+      right:20px;
+      font-size: 28px;
+      transform: rotate(-45deg);
+      z-index: 25;
+      color:#eee;
+    }
+    .show-lyric-box{
+      width:90%;
+      height:100%;
+      position: absolute;
+      left:5%;
+      top:5%;
+      z-index: 20;
+      overflow-y: auto;
+    }
+    .showLyricUl{
+      width:100%;
+      list-style: none;
+      padding: 0;
+      position: absolute;
+      top:0;
+      transition:all 0.8s;
+    }
+    .show-lyrics{
+      color:#FFF;
+      height:20px;
+      font-size: 16px;
+      margin:20px 0;
+      text-align: center;
+    }
+    .control-volume-box{
+      width:100%;
+      height:24px;
+      position: absolute;
+      top:40px;
+      left:0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .volume-img{
+      width:18px;
+      height:18px;
+      margin-right: 10px;
+    }
+    .play-rate,.volume-rate{
+      width:200px;
+      height:2.5px;
+      background: #aaa;
+      position: relative;
+    }
+    .volume-ind,.play-ind{
+      width:20px;
+      height:20px;
+      position: absolute;
+      border-radius: 50%;
+      top:-8.75px;
+      left:190px;
+      background: #eee;
+    }
+    .play-ind{
+      left:-10px;
+    }
+    .played,.volume-size{
+      height:100%;
+      width:100%;
+      background: #eee;
+    }
+    .played{
+      width:0%;
+    }
+    .lyric-box{
+      width:90%;
+      height:76%;
+      position: absolute;
+      top:70px;
+      left:5%;
+      overflow: hidden;
+    }
+    #lyricUl{
+      width:100%;
+      list-style: none;
+      padding: 0;
+      position: absolute;
+      top:0;
+      transition:all 0.8s;
+    }
+    .lyric-list{
+      color:rgba(200,200,200,.9);
+      height:20px;
+      font-size: 16px;
+      margin:20px 0;
+      text-align: center;
+      transition:all 0.3s;
+      overflow: hidden;
+      width:100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    #lyricUl .active{
+      color:rgb(255,152,208);
+    }
+    .control-rate-box{
+      width:100%;
+      height:24px;
+      position: absolute;
+      bottom:50px;
+      left:0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .total-time,.rate-time{
+      color:rgba(200,200,200,.5);
+      font-size: 13px;
+      margin:0 10px;
+    }
+    @media screen and (min-width: 768px) {
+      .shutdown-showLyric{
+        cursor: pointer;
+      }
+    
+    }
 </style>

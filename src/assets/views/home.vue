@@ -3,9 +3,10 @@
 
     <!-- 登录 -->
     <div v-if="isRegister" class="hadRegister-box">
+      <div class="login-img-cover"></div>
       <div class="login-intf">
         <div class="logoc-box">
-          <img class="logoc" src="../../../static/img/logoc.jpg" alt="" @click="toHome()">
+          <img class="logoc" src="../../../static/img/logoc.jpg" alt="" @click.stop="toHome()">
         </div>
         {{userName}}
         <p class="dianjidenglu">点击图标登录此帐号</p>
@@ -50,14 +51,15 @@ export default {
         }
       }
     },
+   
     created(){
       this.getLocalUser;
     }
   }
   </script>
 
-  <style>
-    .home-box{
+<style>
+.home-box{
       width:100%;
       height:100%;
     }
@@ -90,4 +92,18 @@ export default {
       color:#ccc;
       font-size: 13px;
     }
+    @media screen and (min-width: 768px) {
+        .login-img-cover{
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,.7);
+        }
+        .login-intf{
+          position: absolute;
+          left: 50%;
+          top:50%;
+          transform: translate(-50%,-50%);
+        }
+    }
+
 </style>

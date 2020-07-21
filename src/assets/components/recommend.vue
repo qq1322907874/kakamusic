@@ -105,6 +105,9 @@
       }
     },
     methods:{
+      setActiveStyleSheet(filename){
+        document.write("<link href="+filename+" rel=stylesheet>");
+      },
       toSysSongList(t){
         this.$store.state.sysList = t;
         this.$store.state.songList = true;
@@ -167,7 +170,7 @@
 </script>
 
 <style>
-  .recommend-container{
+.recommend-container{
     width:100%;
     padding:0 3%;
     box-sizing: border-box;
@@ -295,4 +298,48 @@
   .bottom-padding{
     padding-bottom: 50px;
   }
+
+@media screen and (min-width: 768px) {
+.recommend-container,.category-container{
+    width:76%;
+    margin:0 12%;
+    padding: 0;
+  }
+  .cb{
+    width:150px;
+    height:190px;
+    float:left;
+    margin:0px 4%;
+  }
+  .cb:last-of-type{
+    margin-bottom: 50px;
+  }
+
+  .cc-h2{
+    margin-left: 0;
+  }
+
+  .cc-flex-box{
+    height:190px;
+  }
+
+  .cc-flex-box .cc{
+    width:16%;
+    margin:0;
+  }
+  .cc:last-of-type{
+    margin-right: 15%;
+  }
+
+  .cc-flex-box .en-box{
+    margin:0 18%;
+  }
+
+  .cc-img-box,.cc-img{
+    height:150px;
+    border-radius: 12px;
+  }
+
+}
+
 </style>

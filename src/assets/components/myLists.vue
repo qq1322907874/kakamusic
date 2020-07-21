@@ -90,14 +90,14 @@
       this.$store.state.selected = "1";
     },
     mounted(){
-      
+
     }
 
   }
 </script>
 
 <style>
-  .toast-failed{
+.toast-failed{
     color:#ff5b45;
   }
   .lists-container{
@@ -151,5 +151,18 @@
    .lists-count{
      font-size: 12px;
      color:#ccc;
+   }
+   @media screen and (min-width: 768px) {
+     .lists-container{
+       margin:0 12%;
+       width:76%;
+      }
+      .mint-msgbox{
+        width:30%;
+      }
+      .lists-name{
+   	   cursor: pointer;
+      }
+   
    }
 </style>

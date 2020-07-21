@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="login-box-cover">
       <div class="register-box" v-if="isShowLogin">
         <h1>咖咖音乐</h1>
@@ -13,7 +12,7 @@
         <input type="password" class="user-inp" placeholder="重新输入密码" v-model="reInp"
           :onkeyup="checkPswd()">
         <mt-button type="primary" class="register-btn" @click.native="getRegisterInfo()">注册</mt-button>
-        <p class="to-login" @click.stop.prevent="showLogin()">切换账号登录点我</p>
+        <p class="to-login" @click.stop.prevent="showLogin()"><span class="toLoginText">切换账号登录点我</span></p>
       </div>
 
       <div class="register-box" v-else>
@@ -24,10 +23,9 @@
           <input type="text" class="user-inp" placeholder="请输入手机号" v-model="uId" :onkeyup="uId=uId.replace(/[^\d]/,'')">
           <input type="password" class="user-inp" placeholder="请输入密码" v-model="uPswd" :onkeyup="checkPswd()">
           <mt-button type="primary" class="register-btn" @click.native="getLoginInfo()">登录</mt-button>
-          <p class="to-login" @click.stop.prevent="showLogin()">切换注册点我</p>
+          <p class="to-login" @click.stop.prevent="showLogin()"><span class="toLoginText">切换注册点我</span></p>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -179,6 +177,7 @@
     computed:{
 
     },
+    
     created(){
     }
 
@@ -186,7 +185,7 @@
 </script>
 
 <style>
-  .login-box{
+.login-box{
     width:100%;
     height:100%;
     background-image: url(../../../static/img/bg.gif);
@@ -253,4 +252,49 @@
     text-align: center;
     font-weight: 600;
   }
+  
+@media screen and (min-width: 768px) {
+  .login-box{
+      background-size: contain;
+    }
+  .login-box-cover{
+    background: rgba(0,0,0,.7);
+    box-shadow: inset 0 0 500px rgba(0,0,0,.6);
+  }
+  .logoh-box{
+    width:400px;
+  }
+  .logoh{
+    margin-top:80px;
+    width:400px;
+  }
+  .logo-qita{
+    display: none;
+  }
+  .user-inp{
+    width:25%;
+    box-sizing: border-box;
+    margin-top:15px;
+    height:32px;
+    padding:0 15px;
+    font-size: 15px;
+    border:0px solid #ccc;
+    border-radius: 6px;
+  }
+  .user-inp:focus{
+    outline: none;
+    box-shadow:0 0 8px #000;
+  }
+  .user-inp::placeholder{
+    color:#ccc;
+  }
+  .register-btn{
+    width:25%;
+  }
+  .toLoginText{
+    cursor: pointer;
+  }
+
+}
+
 </style>

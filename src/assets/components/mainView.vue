@@ -62,7 +62,7 @@
           </div>
           <div class="my-id">{{uId}}</div>
         </div>
-        <div class="my-set">
+        <div class="my-set" @click.stop.prevent="preventClose()">
           <div class="opt autoStop">
             <div class="setStop-txt">定时停止/播放:
               <mt-picker :slots="slots" :visibleItemCount="1" @change="onValuesChange"></mt-picker>
@@ -126,6 +126,9 @@ export default {
   },
   methods:{
     donotCloseMy(){//防止点击关闭my盒子，什么都不用写
+
+    },
+    preventClose(){
 
     },
     changeHeadImg(e){//保存用户上传的头像
@@ -496,5 +499,65 @@ export default {
     width:100%;
     height:100px;
   }
+  
+@media screen and (min-width: 768px) {
+    @keyframes myWidthChange{
+        from{width:0px;}
+        to{width:20%;}
+      }
+      .head-box{
+        width:100%;
+        position: fixed;
+        top:0;
+        background: #fff;
+        left: 0;
+        z-index: 200;
+      }
+
+      .my{
+        cursor: pointer;
+        left:55px;
+      }
+
+    .closeBigImg{
+    	cursor: pointer;
+    }
+
+    .search-tip{
+      cursor: pointer;
+    }
+
+      .my-box{
+        width:20%;
+      }
+
+      .big-img{
+        width:60%;
+        height:auto;
+      }
+
+      .nomalfont{
+        cursor: pointer;
+      }
+
+      .go-count-Down{
+        cursor: pointer;
+      }
+
+      .search{
+        right:60px;
+      }
+
+      .mint-tab-container .mint-swipe{
+        width:76%;
+        margin:10px 12%;
+        height: 170px;
+        border-radius: 15px;
+      }
+      .swipe{
+        width:100%;
+        height: 300px;
+      }
+}
 
 </style>
